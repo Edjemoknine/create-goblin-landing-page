@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+}
+
+header ul {
+    display: flex;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+ul a:hover {
+    border-bottom: 1px solid white;
+}
+
+.fa-bars {
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, rgb(1, 56, 1), rgb(62, 174, 62));
+    padding: 0 17%;
+    display: grid;
+    grid-template-columns: repeat(2, 1Fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 35Px;
+}
+
+.hero-text h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15Px;
+}
+
+.hero-text h1 {
+    font-size: 90px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 20Px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 30Px;
+}
+
+.hero-text a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 30Px;
+    padding: 13Px 30Px;
+    background: rgba(11, 255, 11, 0.496);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 25Px;
+    cursor: pointer;
+    transition: .3S ease;
+}
+
+.hero-text a:hover {
+    transform: translateX(5px);
+}
+
+.hero-text .watch {
+    margin-left: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.hero-text .watch i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 7%;
+}
+
+.icons a {
+    display: block;
+    text-decoration: none;
+    margin: 30Px 0;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.icons a:hover {
+    transform: scale(1.3);
+}
+
+.icons a i {
+    font-size: 20px;
+}
+
+.img img {
+    width: 800px;
+}
+
+.down {
+    position: absolute;
+    right: 6%;
+    bottom: 6%;
+    background: rgba(0, 255, 0, 0.637);
+    width: 40Px;
+    height: 40Px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.down i {
+    font-size: 18px;
+    transition: .3s ease;
+    animation: up .5s alternate infinite;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(-2Px);
+    }
+    to {
+        transform: translateY(4Px);
+    }
+}
+
+@media (max-width:950Px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .hero-text {
+        padding-top: 150Px;
+    }
+    .img img {
+        width: 100%;
+    }
+    .fa-bars {
+        display: block;
+    }
+    .nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250Px;
+        height: 400px;
+        background-color: rgb(9, 76, 9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .5s ease;
+    }
+    .nav a {
+        margin-left: 0;
+        margin: 20px 0;
+    }
+    .nav.open {
+        right: 0;
+    }
+    .icons {
+        display: none;
+    }
+    .down {
+        display: none;
+    }
+    .hero-text h1 {
+        font-size: 60px;
+    }
+}
